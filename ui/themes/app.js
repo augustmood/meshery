@@ -564,6 +564,7 @@ export const styles = (theme) => ({
     display: 'flex',
     minHeight: '100vh',
     height: '100vh',
+    position: 'relative',
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -596,13 +597,13 @@ export const styles = (theme) => ({
     flexDirection: 'column',
     height: '100vh',
     position: 'relative',
-    overflow: 'auto',
   },
   contentWrapper: {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
     minHeight: 'min-content',
+    overflow: 'auto',
   },
   mainContent: {
     flex: 1,
