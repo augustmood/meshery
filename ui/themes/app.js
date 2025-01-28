@@ -594,6 +594,15 @@ export const styles = (theme) => ({
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
+    height: '100vh',
+    position: 'relative',
+    overflow: 'auto',
+  },
+  contentWrapper: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: 'min-content',
   },
   mainContent: {
     flex: 1,
@@ -605,10 +614,12 @@ export const styles = (theme) => ({
   footer: {
     backgroundColor: '#fff',
     padding: theme.spacing(2),
+    width: '100%',
   },
   footerDark: {
     backgroundColor: '#202020',
     padding: theme.spacing(2),
+    width: '100%',
   },
   footerText: {
     cursor: 'pointer',
