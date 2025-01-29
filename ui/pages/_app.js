@@ -776,19 +776,19 @@ class MesheryApp extends App {
                               setActiveContexts={this.setActiveContexts}
                               setAppState={setAppState}
                             />
+                            {!this.state.isFullScreenMode && (
+                              <Header
+                                onDrawerToggle={this.handleDrawerToggle}
+                                onDrawerCollapse={isDrawerCollapsed}
+                                contexts={this.state.k8sContexts}
+                                activeContexts={this.state.activeK8sContexts}
+                                setActiveContexts={this.setActiveContexts}
+                                searchContexts={this.searchContexts}
+                                updateExtensionType={this.updateExtensionType}
+                                abilityUpdated={this.state.abilityUpdated}
+                              />
+                            )}
                             <div className={classes.contentWrapper}>
-                              {!this.state.isFullScreenMode && (
-                                <Header
-                                  onDrawerToggle={this.handleDrawerToggle}
-                                  onDrawerCollapse={isDrawerCollapsed}
-                                  contexts={this.state.k8sContexts}
-                                  activeContexts={this.state.activeK8sContexts}
-                                  setActiveContexts={this.setActiveContexts}
-                                  searchContexts={this.searchContexts}
-                                  updateExtensionType={this.updateExtensionType}
-                                  abilityUpdated={this.state.abilityUpdated}
-                                />
-                              )}
                               <main
                                 className={classes.mainContent}
                                 style={{
@@ -808,12 +808,12 @@ class MesheryApp extends App {
                                   </ErrorBoundary>
                                 </LocalizationProvider>
                               </main>
+                              <Footer
+                                classes={classes}
+                                handleL5CommunityClick={this.handleL5CommunityClick}
+                                capabilitiesRegistry={this.props.capabilitiesRegistry}
+                              />
                             </div>
-                            <Footer
-                              classes={classes}
-                              handleL5CommunityClick={this.handleL5CommunityClick}
-                              capabilitiesRegistry={this.props.capabilitiesRegistry}
-                            />
                           </NotificationCenterProvider>
                         </SnackbarProvider>
                       </div>

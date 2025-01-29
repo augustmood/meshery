@@ -564,7 +564,7 @@ export const styles = (theme) => ({
     display: 'flex',
     minHeight: '100vh',
     height: '100vh',
-    position: 'relative',
+    overflow: 'hidden',
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -595,15 +595,15 @@ export const styles = (theme) => ({
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    height: '100vh',
     position: 'relative',
+    overflow: 'visible',
   },
   contentWrapper: {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    minHeight: 'min-content',
     overflow: 'auto',
+    minHeight: 0,
   },
   mainContent: {
     flex: 1,
@@ -611,16 +611,19 @@ export const styles = (theme) => ({
     [theme.breakpoints.down('sm')]: {
       padding: '24px 16px 16px',
     },
+    position: 'relative',
   },
   footer: {
     backgroundColor: '#fff',
     padding: theme.spacing(2),
     width: '100%',
+    marginTop: 'auto',
   },
   footerDark: {
     backgroundColor: '#202020',
     padding: theme.spacing(2),
     width: '100%',
+    marginTop: 'auto',
   },
   footerText: {
     cursor: 'pointer',
