@@ -564,7 +564,6 @@ export const styles = (theme) => ({
     display: 'flex',
     minHeight: '100vh',
     height: '100vh',
-    overflow: 'hidden',
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -595,8 +594,6 @@ export const styles = (theme) => ({
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    position: 'relative',
-    overflow: 'visible',
   },
   contentWrapper: {
     flex: 1,
@@ -616,14 +613,10 @@ export const styles = (theme) => ({
   footer: {
     backgroundColor: '#fff',
     padding: theme.spacing(2),
-    width: '100%',
-    marginTop: 'auto',
   },
   footerDark: {
     backgroundColor: '#202020',
     padding: theme.spacing(2),
-    width: '100%',
-    marginTop: 'auto',
   },
   footerText: {
     cursor: 'pointer',
